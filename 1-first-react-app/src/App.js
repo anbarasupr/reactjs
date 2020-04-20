@@ -23,6 +23,7 @@ import { Stylesheet, Inline } from './components/12-styling/Stylesheet';
 import style from './components/12-styling/appstyle.module.css';
 import './components/12-styling/appstyle.css';
 import { Form } from './components/13-forms/form';
+import { LifecycleA } from './components/14-life-cycle-hooks/LifeCycleA';
 
 /* function App() {
   return (
@@ -140,7 +141,14 @@ export default class App extends React.Component {
 
           {
               /* Forms */
-              <Form/>
+            /*   <Form/> */
+          }
+
+          {
+            <div>
+              <LifecycleA/>
+            </div>
+
           }
 
         </header>
