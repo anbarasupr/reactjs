@@ -17,6 +17,12 @@ import { EventBind } from './components/8-event-bind/EventBind';
 import { ParentComponent } from './components/9-method-as-props/ParentComponent';
 import { UserGreeting } from './components/10-conditional-rendering/UserGreeting';
 import { NameList } from './components/11-list-rendering/NameList';
+import { NameListIndex } from './components/11-list-rendering/NameListIndex';
+import { ToDoList } from './components/11-list-rendering/IndexAsKeyAntipattern';
+import { Stylesheet, Inline } from './components/12-styling/Stylesheet';
+import style from './components/12-styling/appstyle.module.css';
+import './components/12-styling/appstyle.css';
+import { Form } from './components/13-forms/form';
 
 /* function App() {
   return (
@@ -115,8 +121,26 @@ export default class App extends React.Component {
           }
 
           {
-            /* List Rendering */
-            <NameList />
+            /* List Rendering  & Keys*/
+            /*  <div>
+             <NameList />
+             <NameListIndex/>
+             <ToDoList/>
+             </div> */
+          }
+          {
+            /* Styling */
+           /*  <div>
+              <Stylesheet primary={true}/>
+              <Inline/>
+              <h2 className='error'>App Error</h2>
+              <h2 className={style.success}>App CSS Modules</h2>
+            </div> */
+          }
+
+          {
+              /* Forms */
+              <Form/>
           }
 
         </header>
