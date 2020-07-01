@@ -43,4 +43,11 @@ export class LifecycleB extends React.Component {
     componentDidUpdate (prevProps, prevState, snapshot){
         console.log('LifecycleB componentDidUpdate');
     }
+
+    // Unmounting phase
+    componentWillUnmount(){
+        console.log('LifecycleB componentWillUnmount');
+    }
+
+    // Error Handling phase
 }

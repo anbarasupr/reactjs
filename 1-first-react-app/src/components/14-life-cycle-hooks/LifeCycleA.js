@@ -27,7 +27,7 @@ export class LifecycleA extends React.Component {
 
         return (
             <div>
-               <p> Lifecycle A</p>
+                <p> Lifecycle A</p>
                 <button onClick={this.changeState}>Change State</button>
                 <LifecycleB />
             </div>
@@ -58,8 +58,17 @@ export class LifecycleA extends React.Component {
     }
 
     // Unmounting phase
+    componentWillUnmount() {
+        console.log('LifecycleA componentWillUnmount');
+    }
 
     // Error Handling phase
+    static getDerivedStateFromError(error) {
+        console.log('LifecycleA getDerivedStateFromError', error);
+    }
+    componentDidCatch(error, info) {
+        console.log('LifecycleA componentDidCatch', error, info);
+    }
 }
 
 
