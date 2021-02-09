@@ -1,12 +1,12 @@
 import React from 'react';
 
-/* function Greet(){
+export function Hello() {
     return <h1>Hello Stateless Functional Component</h1>;
-} */
+}
 
 
-/* const Greet = () => <h1>Hello Stateless Functional Component with Lambda, With default export</h1>;
-export default Greet; */
+const Greeting = () => <h1>Hello Stateless Functional Component with Lambda, With default export</h1>;
+export default Greeting;
 
 export const Greet = () => <h1>Greet : Hello Stateless Functional Component with Lambda, With named export</h1>;
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import MyGreet from './components/Greet'; // default import, no need to be in parenthesis
-import { Greet } from './components/1-functional-component/Greet'; // named export and it should be in parenthesis
+import MyGreeting from './components/1-functional-component/Greet'; // default import, no need to be in parenthesis
+import { Greet, Hello as SayHello } from './components/1-functional-component/Greet'; // named export and it should be in parenthesis
 import { Welcome } from './components/2-class-component/Welcome';
 import { WithJSX, WithJSX2, WithoutJSX, WithoutJSX2, WithoutJSX3, WithoutJSX4, WithoutJSX5 } from './components/3-JSX/Hello';
 import { FunctionalUserProps } from './components/4-props/FunctionalUserProps';
@@ -46,7 +46,11 @@ export default class App extends React.Component {
         <header className="App-header">
           {
             /* Functional Component */
-            /*  <Greet /> */
+            /* <div>
+              <SayHello />
+              <MyGreeting />
+              <Greet />
+            </div> */
           }
 
           {
@@ -131,23 +135,23 @@ export default class App extends React.Component {
           }
           {
             /* Styling */
-           /*  <div>
-              <Stylesheet primary={true}/>
-              <Inline/>
-              <h2 className='error'>App Error</h2>
-              <h2 className={style.success}>App CSS Modules</h2>
-            </div> */
+            /*  <div>
+               <Stylesheet primary={true}/>
+               <Inline/>
+               <h2 className='error'>App Error</h2>
+               <h2 className={style.success}>App CSS Modules</h2>
+             </div> */
           }
 
           {
-              /* Forms */
+            /* Forms */
             /*   <Form/> */
           }
 
           {
-            <div>
+            /*<div>
               <LifecycleA/>
-            </div>
+            </div>*/
           }
 
         </header>
