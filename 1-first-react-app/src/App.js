@@ -90,7 +90,7 @@ export default class App extends React.Component {
           {
             /* State */
             /*  <Message name='Anbu'/> */
-            /*  <Counter addValue='3'/> */
+              <Counter addValue='3'/> 
           }
 
           {

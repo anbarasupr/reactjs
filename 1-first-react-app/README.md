@@ -1,3 +1,6 @@
+
+Plugin : Use 'ES7 React/Redux/GraphQL/React-Native snippets'.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
