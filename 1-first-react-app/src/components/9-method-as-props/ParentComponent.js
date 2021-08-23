@@ -3,7 +3,7 @@ import { ChildComponent } from './ChildComponent';
 
 export class ParentComponent extends React.Component {
     constructor(props) {
-        console.log('ParentComponent constructor props', props);
+        console.log('ParentComponent constructor props', props, props.componentName);
         super(props);
         this.state = {
             // parentName: 'Parent'
@@ -14,7 +14,7 @@ export class ParentComponent extends React.Component {
     }
 
     greetParent(childName) {
-        console.log('greetParent scope', this);
+        console.log('greetParent scope', this, childName);
         console.log(`Hello ${this.state.parentName}, from ${childName}`);
         alert(`Hello ${this.state.parentName}, from ${childName}`);
     }

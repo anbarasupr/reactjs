@@ -1,8 +1,8 @@
 import React from 'react';
 
 export class EventBind extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             message: 'Hello'
         };
@@ -10,14 +10,21 @@ export class EventBind extends React.Component {
     }
 
     clickHandler(event) {
-        console.log('Button clickHandler', event);
+        console.log('Button clickHandler', event, this);
+        this.setState({
+            message: 'Goodbye'
+        });
+    }
+
+    clickMeHandler(event) {
+        console.log('Button clickHandler', event, this);
         this.setState({
             message: 'Goodbye'
         });
     }
 
     arrowFunctionClickHandler = (event) => {
-        console.log('Button arrowFunctionClickHandler', event);
+        console.log('Button arrowFunctionClickHandler', event, this);
         this.setState({
             message: 'Goodbye'
         });
@@ -29,7 +36,7 @@ export class EventBind extends React.Component {
                 <h2>{this.state.message}</h2>
                 {
                     /* Approach 1: clickHandler() doesnt have access to this  */
-                    /* <button onClick={this.clickHandler}>Click me</button> */
+                    <button onClick={this.clickMeHandler}>Test me</button>
                 }
                 {
                     /* Approach 2: clickHandler() have access to this, since this is binded to the handler */

@@ -75,6 +75,8 @@ export class LifecycleA extends React.Component {
 /*
     Lifecycle Hooks:
 
+    Four phases:
+    -----------
     Mounting - When an instance of a component is being created and inserted into the DOM
     Updating - When a component is being re-rendered as a result of changes to either its props or state.
     Unmounting - When a component is being removed from the DOM

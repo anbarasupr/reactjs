@@ -8,10 +8,11 @@ export class Message extends React.Component {
         this.state = {
             message: 'Click the subscription to get notification'
         };
-        console.log('Message constructor', this.props, this.data); // undefined
+        console.log('Message constructor', this.props, this.data); // props undefined here
     }
 
     changeMessage() {
+        this.data.name = this.data.name + ' Test'; 
         this.setState({
             message: 'Thank you for subscribing'
         });

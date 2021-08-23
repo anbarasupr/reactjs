@@ -20,8 +20,8 @@ import { NameList } from './components/11-list-rendering/NameList';
 import { NameListIndex } from './components/11-list-rendering/NameListIndex';
 import { ToDoList } from './components/11-list-rendering/IndexAsKeyAntipattern';
 import { Stylesheet, Inline } from './components/12-styling/Stylesheet';
-import style from './components/12-styling/appstyle.module.css';
-import './components/12-styling/appstyle.css';
+import style from './components/12-styling/appstyle.module.css'; // module level withi imported class due to alias given
+import './components/12-styling/appstyle.css'; // global level
 import { Form } from './components/13-forms/form';
 import { LifecycleA } from './components/14-life-cycle-hooks/LifeCycleA';
 
@@ -47,6 +47,7 @@ export default class App extends React.Component {
           {
             /* Functional Component */
             /* <div>
+              <h1>Functional Component Example:</h1><hr />
               <SayHello />
               <MyGreeting />
               <Greet />
@@ -55,23 +56,30 @@ export default class App extends React.Component {
 
           {
             /* Class Component */
-            /* <Welcome /> */
+            /* <div>
+              <h1>Class Component Example:</h1><hr />
+              <Welcome />
+            </div> */
           }
 
           {
             /* JSX */
-            /* <WithJSX />
-            <WithJSX2 />
-            <WithoutJSX />
-            <WithoutJSX2 />
-            <WithoutJSX3 />
-            <WithoutJSX4 />
-            <WithoutJSX5 /> */
+            /* <div>
+              <h1>JSX Example:</h1><hr />
+              <WithJSX />
+              <WithJSX2 />
+              <WithoutJSX />
+              <WithoutJSX2 />
+              <WithoutJSX3 />
+              <WithoutJSX4 />
+              <WithoutJSX5 />
+            </div> */
           }
 
           {
             /* Props */
             /* <div>
+              <h1>Props Example:</h1><hr />
               <FunctionalUserProps firstName='Anbu' lastName='Arasu' heroName='Wonder Woman'>
                 <p> Hero Power : Super Human Strength & Speed </p>
               </FunctionalUserProps>
@@ -81,7 +89,7 @@ export default class App extends React.Component {
               </FunctionalUserProps>
 
               <ClassUserProps firstName='Sharvesh' lastName='Anbu' heroName='Iron Man'>
-              <p> Hero Power : Fire & Fly </p>
+                <p> Hero Power : Fire & Fly </p>
               </ClassUserProps>
             </div> */
 
@@ -89,8 +97,11 @@ export default class App extends React.Component {
 
           {
             /* State */
-            /*  <Message name='Anbu'/> */
-              <Counter addValue='3'/> 
+            /* <div>
+              <h1>State Example:</h1><hr />
+              <Message name='Anbu' />
+              <Counter addValue='3' />
+            </div> */
           }
 
           {
@@ -112,7 +123,7 @@ export default class App extends React.Component {
 
           {
             /* Event Binding */
-            /*  <EventBind /> */
+            /* <EventBind /> */
           }
 
           {
@@ -138,14 +149,14 @@ export default class App extends React.Component {
             /*  <div>
                <Stylesheet primary={true}/>
                <Inline/>
-               <h2 className='error'>App Error</h2>
-               <h2 className={style.success}>App CSS Modules</h2>
+               <h2 className='error'>App Error - Regular Stylesheet - Applies to child Components might lead css conflicts</h2>
+               <h2 className={style.success}>App CSS Modules - Module Stylesheet</h2>
              </div> */
           }
 
           {
             /* Forms */
-            /*   <Form/> */
+            <Form />
           }
 
           {

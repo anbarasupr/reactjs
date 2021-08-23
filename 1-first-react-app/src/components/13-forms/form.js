@@ -23,6 +23,7 @@ export class Form extends React.Component {
     }
 
     handleTopicChange = (event) => {
+        console.log('handleTopicChange topic', this.state);
         this.setState({
             topic: event.target.value
         });

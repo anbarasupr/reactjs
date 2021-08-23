@@ -5,7 +5,7 @@ export const ChildComponent = (props) => {
         <div>
             {
                 /* Cannot pass parameters fomr here */
-                /* <button onClick={props.greetHandler}>Greet Parent</button> */
+                <button onClick={props.greetHandler}>Greet Parent No Param</button>
             }
 
             {

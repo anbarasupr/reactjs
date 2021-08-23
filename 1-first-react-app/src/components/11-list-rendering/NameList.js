@@ -46,20 +46,31 @@ export const NameList = () => {
     */
     const personsList = persons.map(person => <Person key={person.id} person={person} />);
 
+    const mystyle = {
+        color: "green",
+        backgroundColor: "DodgerBlue",
+        padding: "10px",
+        fontFamily: "Arial",
+        width: "100%",
+        height: "100%"
+    };
+
     return (
-        <div>
+        <div style={mystyle}>
             {
                 /* names.map(name => <h2>{name}</h2>) */
-                nameList,
+                nameList
+            }
+            {
                 personsList
             }
-        </div>
+        </div >
     )
 }
 
 
 
-/* 
+/*
     Lis and Keys
     1. A key is a special attribute you need to include when creating lists of elements
     2. keys give the elements a stable identity

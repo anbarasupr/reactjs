@@ -38,8 +38,8 @@ export function Inline() {
 
 /*
     Styling React Components
-    1. CSS Stylesheets
+    1. CSS Stylesheets - ( Regular Stylesheet - Applies to child Components might lead css conflicts )
     2. Inline Styling
-    3. CSS Modules
-    4. CSS in JS libraries
+    3. CSS Modules - local to the class where it is imported
+    4. CSS in JS libraries (Styled Components)
 */

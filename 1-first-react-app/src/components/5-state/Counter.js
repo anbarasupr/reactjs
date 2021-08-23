@@ -27,7 +27,7 @@ export class Counter extends React.Component {
          this.setState({
              count:this.state.count+1
          });
-         console.log('Counter after increment', this.state.count); // we dont get latest value here even after the setState() has been called.
+         console.log('1 Counter after increment', this.state.count); // we dont get latest value here even after the setState() has been called.
          // so do not do any execution with the intention of taking latest state after the setState() is called cause we dont get it. use callback instead of it.
      */
 
@@ -37,7 +37,9 @@ export class Counter extends React.Component {
         }, () => {
             // note this callback will be called 5 times after render() is called. render is called one time
             console.log('Counter after increment inside callback', this.state.count);
-        }); */
+        });
+        console.log('2 Counter after increment', this.state.count); */
+
 
         this.setState((prevState) => ({
             count: prevState.count + 1
@@ -45,8 +47,9 @@ export class Counter extends React.Component {
             // note this callback will be called after render() is called
             console.log('Counter after increment inside callback', this.state.count);
         });
+        console.log('3 Counter after increment', this.state.count);
 
-
+        
         /* this.setState((prevState, props) => ({
             count: prevState.count + Number(props.addValue)
         })); */
@@ -55,7 +58,7 @@ export class Counter extends React.Component {
     }
 
     render() {
-        console.log('Message render', this.state);
+        console.log('Counter render', this.state);
         return (
             <div>
                 <h1>Count - {this.state.count}</h1>
