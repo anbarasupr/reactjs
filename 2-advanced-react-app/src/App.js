@@ -2,6 +2,10 @@ import React from 'react';
 import './App.css';
 import { FragmentDemo, Table, FragmentDemo1 } from './components/1-fragment/Fragment';
 import { PureComp,ParentComp } from './components/2-pure-component/Fragment';
+
+import  MemoComp from './components/3-memo/MemoComp';
+import RefDemo from './components/4-refs/RefDemo';
+import FocusInput from './components/4-refs-with-class-component/FocusInput';
 export default class App extends React.Component {
   render() {
     return (
@@ -18,9 +22,25 @@ export default class App extends React.Component {
 
           {
             /* Component & PureComponent */
-            <>
+            /* <>
               <ParentComp />
-            </>
+            </> */
+          }
+
+          {
+            // Memo
+            /* <MemoComp name = 'Memo Component which is a Pure component for Functional Component'/> */
+          }
+
+          {
+            // refs
+            /* <RefDemo/> */
+          }
+
+          {
+              // refs with class component
+              <FocusInput/>
+
           }
 
         </header>
