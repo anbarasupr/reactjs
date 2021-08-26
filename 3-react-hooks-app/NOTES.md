@@ -34,3 +34,13 @@ Allow you to resue stateful logic
 	
 	
 
+1. useState Hook:
+-----------------
+
+* The useState hook let you add state to functional components
+* In classess, the state is always an object
+* With the useState hook, the state doesnt have to be an object
+* THe useState hook returns an array with 2 elements
+* The first element is the current value of the state, and the second element is the setter function to set the state value
+* If new state value depends on the previous state, then pass a function to the setter function which reveives the previous state as an argument
+* With useState hook, When dealing with boject or arrays, always make sure to spread your state variable in the setter function which copies all the state values and override the required property.
