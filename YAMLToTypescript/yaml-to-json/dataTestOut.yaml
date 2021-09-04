@@ -1,0 +1,29 @@
+openapi: 3.0.1
+info: null
+title: test-title
+description: test-description
+contact:
+  - email: test-email
+license:
+  name: test-license-name
+  url: test-license-url
+version: 1.0.0
+servers:
+  - url: test-servers-url
+tags:
+  - name: tags-name
+    description: tags-description
+paths: '/test/id/{empdId}/salary'
+get:
+  tags:
+    - Employee Name
+  summary: Employee-Summary
+  description: Employee-Description
+  parameters:
+    - name: empdId
+      in: path
+      description: Employee Id
+      required: true
+      schema:
+        type: string
+        maxLength: 10

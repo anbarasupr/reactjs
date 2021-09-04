@@ -1,0 +1,16 @@
+{
+  "name": "working-with-yaml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "json-schema-to-typescript": "9.0.0",
+    "json-to-ts": "^1.7.0"
+  }
+}
