@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@spec2ts/openapi": "^2.0.0-beta.5",
     "js-yaml": "^3.13.1",
     "json-schema-to-typescript": "9.0.0",
     "json-to-ts": "^1.7.0"
