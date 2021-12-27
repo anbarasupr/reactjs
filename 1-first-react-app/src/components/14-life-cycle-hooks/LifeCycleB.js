@@ -5,18 +5,18 @@ export class LifecycleB extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: 'Anbu'
+            name: 'Inital State B'
         };
-        console.log('LifecycleB constructor');
+        console.log('LifecycleB constructor', props);
     }
 
     static getDerivedStateFromProps(props, state) {
-        console.log('LifecycleB getDerivedStateFromProps');
+        console.log('LifecycleB getDerivedStateFromProps', props, state);        
         return null;
     }
 
     render() {
-        console.log('LifecycleB render');
+        console.log('LifecycleB render', this.props, this.state);
 
         return (
             <div>
@@ -30,22 +30,22 @@ export class LifecycleB extends React.Component {
     }
 
     // Updating Phase
-    shouldComponentUpdate (nextProps, nextState){
-        console.log('LifecycleB shouldComponentUpdate');
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('LifecycleB shouldComponentUpdate', nextProps, nextState);
         return true;
     }
 
-    getSnapshotBeforeUpdate (prevProps, prevState) {
-        console.log('LifecycleB getSnapshotBeforeUpdate');
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log('LifecycleB getSnapshotBeforeUpdate', prevProps, prevState);
         return null;
     }
 
-    componentDidUpdate (prevProps, prevState, snapshot){
-        console.log('LifecycleB componentDidUpdate');
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('LifecycleB componentDidUpdate', prevProps, prevState, snapshot);
     }
 
     // Unmounting phase
-    componentWillUnmount(){
+    componentWillUnmount() {
         console.log('LifecycleB componentWillUnmount');
     }
 

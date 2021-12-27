@@ -156,13 +156,13 @@ export default class App extends React.Component {
 
           {
             /* Forms */
-            <Form /> 
+           /*  <Form /> */ 
           }
 
           {
-            /*<div>
+            <div>
               <LifecycleA/>
-            </div>*/
+            </div>
           }
 
         </header>

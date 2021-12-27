@@ -6,25 +6,25 @@ export class LifecycleA extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: 'Initial Phase'
+            name: 'Initial State A'
         };
-        console.log('LifecycleA constructor');
+        console.log('LifecycleA constructor', props);
     }
 
     changeState = () => {
         this.setState({
-            name: 'Updating Phase'
+            name: 'Updating Phase A'
         });
     }
 
     static getDerivedStateFromProps(props, state) {
-        console.log('LifecycleA getDerivedStateFromProps');
+        console.log('LifecycleA getDerivedStateFromProps', props, state);
+        return { name: 'State Modified A' };
         return null;
     }
 
     render() {
-        console.log('LifecycleA render');
-
+        console.log('LifecycleA render', this.props, this.state);
         return (
             <div>
                 <p> Lifecycle A</p>
@@ -44,17 +44,17 @@ export class LifecycleA extends React.Component {
         render & coponentDidUpdate are most common methods in updating phase
     */
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('LifecycleA shouldComponentUpdate');
+        console.log('LifecycleA shouldComponentUpdate', nextProps, nextState);
         return true;
     }
 
     getSnapshotBeforeUpdate(prevProps, prevState) {
-        console.log('LifecycleA getSnapshotBeforeUpdate');
+        console.log('LifecycleA getSnapshotBeforeUpdate', prevProps, prevState);
         return null;
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log('LifecycleA componentDidUpdate');
+        console.log('LifecycleA componentDidUpdate', prevProps, prevState, snapshot);
     }
 
     // Unmounting phase
