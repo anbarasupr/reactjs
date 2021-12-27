@@ -125,8 +125,10 @@ export default class App extends React.Component {
 
           {
             // Axios
-            <PostForm/>
-            <PostList/>
+            <div>
+              <PostForm />
+              <PostList />
+            </div>
           }
         </header>
       </div>
