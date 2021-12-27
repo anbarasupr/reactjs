@@ -3,9 +3,10 @@ import React, { Component } from 'react'
 export class RefDemo extends Component {
     constructor(props) {
         super(props);
+        // regular ref creation approach
         this.inputRef = React.createRef();
 
-        // callback ref approach
+        // callback ref creation approach
         this.cbRef = null;
         this.setCbRef = element => this.cbRef = element; // set using callback method
     }
@@ -45,4 +46,6 @@ export class RefDemo extends Component {
 export default RefDemo
 
 
-// refs used to access the dom properties to manipulate
+// refs used to access the dom properties to manipulate directly in the react
+
+// we added ref for the input control

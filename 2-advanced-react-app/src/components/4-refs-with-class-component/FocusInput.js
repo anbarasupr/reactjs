@@ -23,3 +23,9 @@ export class FocusInput extends Component {
 }
 
 export default FocusInput
+
+
+/* we  added ref to a class component here. 
+* From the class component ref, we are focusing to the input which is in the Input component
+* refs cannot be attached to functional component
+*/

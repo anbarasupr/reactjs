@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import MemoComp from '../3-memo/MemoComp';
 
 export class PureComp extends PureComponent {
     render() {
@@ -27,13 +28,14 @@ export class ParentComp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: 'Parent'
+            name: 'Parent',
+            id: 1
         };
     }
 
     componentDidMount() {
         console.log('ParentComp componentDidMount', this.state);
-        setTimeout(() => {
+        setInterval(() => {
             this.setState({
                 name: 'Parent',
                 id: this.state.id + 1
@@ -42,11 +44,17 @@ export class ParentComp extends React.Component {
     }
 
     render() {
+        console.log('ParentComp render', this.state);
         return (
             <div>
                 Parent Component {this.state.name}
                 <RegularComp name={this.state.name} />
-                <PureComp name={this.state.name} />
+                <PureComp name={this.state.name} /> 
+                <MemoComp name = 'Memo Component which is a Pure component for Functional Component'/>
+                <MemoComp name={this.state.name}/>
+                {/* <RegularComp {...this.state} />
+                <PureComp {...this.state} /> 
+                <MemoComp {...this.state}/> */}
             </div>
         );
     }
