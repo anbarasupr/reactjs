@@ -59,6 +59,7 @@ class PostForm extends Component {
 					</div>
 					<button type="submit">Submit</button>
 				</form>
+				{JSON.stringify(this.state)}
 			</div>
 		)
 	}
