@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import MyGreeting from './components/1-functional-component/Greet'; // default import, no need to be in parenthesis
+import MyGreeting from './components/1-functional-component/Greet'; // default import, no need to be in parenthesis and you can give any name
 import { Greet, Hello as SayHello } from './components/1-functional-component/Greet'; // named export and it should be in parenthesis
 import { Welcome } from './components/2-class-component/Welcome';
 import { WithJSX, WithJSX2, WithoutJSX, WithoutJSX2, WithoutJSX3, WithoutJSX4, WithoutJSX5 } from './components/3-JSX/Hello';
@@ -97,11 +97,11 @@ export default class App extends React.Component {
 
           {
             /* State */
-            /* <div>
+           /*   <div>
               <h1>State Example:</h1><hr />
               <Message name='Anbu' />
               <Counter addValue='3' />
-            </div> */
+            </div>  */
           }
 
           {
@@ -156,7 +156,7 @@ export default class App extends React.Component {
 
           {
             /* Forms */
-            <Form />
+            <Form /> 
           }
 
           {

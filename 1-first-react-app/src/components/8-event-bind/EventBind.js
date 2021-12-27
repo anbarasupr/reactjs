@@ -16,8 +16,15 @@ export class EventBind extends React.Component {
         });
     }
 
+    clickMeTooHandler(event) {
+        console.log('Button clickMeTooHandler', event, this);
+        this.setState({
+            message: 'Goodbye'
+        });
+    }
+
     clickMeHandler(event) {
-        console.log('Button clickHandler', event, this);
+        console.log('Button clickMeHandler', event, this);
         this.setState({
             message: 'Goodbye'
         });
@@ -36,15 +43,15 @@ export class EventBind extends React.Component {
                 <h2>{this.state.message}</h2>
                 {
                     /* Approach 1: clickHandler() doesnt have access to this  */
-                    <button onClick={this.clickMeHandler}>Test me</button>
+                    <button onClick={this.clickMeHandler}>Click me 1</button>
                 }
                 {
                     /* Approach 2: clickHandler() have access to this, since this is binded to the handler */
-                    /* <button onClick={this.clickHandler.bind(this)}>Click me</button> */
+                     <button onClick={this.clickHandler.bind(this)}>Click me 2</button> 
                 }
                 {
                     /* Approach 3: arrow function approach - clickHandler() have access to this here  */
-                    /* <button onClick={()=>this.clickHandler()}>Click me</button> */
+                     <button onClick={(evt)=>this.clickMeTooHandler(evt)}>Click me 3</button> 
                 }
 
                 {/* All the above approaches are not good, because when the state change happen, render will be called and the event bindings are created as many time when the state changes */}

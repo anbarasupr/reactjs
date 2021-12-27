@@ -23,13 +23,13 @@ export class Counter extends React.Component {
     increment() {
         // this.state.count = this.state.count + 1; // this. wont work. need to call setState() to happen the change detection
 
-        /*  console.log('Counter before increment', this.state.count);
+          console.log('Counter before increment', this.state.count);
          this.setState({
              count:this.state.count+1
          });
-         console.log('1 Counter after increment', this.state.count); // we dont get latest value here even after the setState() has been called.
+         console.log('1. Counter after increment', this.state.count); // we dont get latest value here even after the setState() has been called.
          // so do not do any execution with the intention of taking latest state after the setState() is called cause we dont get it. use callback instead of it.
-     */
+     
 
         // to get the latest state value, use callback in setState()
         /* this.setState({
@@ -38,16 +38,16 @@ export class Counter extends React.Component {
             // note this callback will be called 5 times after render() is called. render is called one time
             console.log('Counter after increment inside callback', this.state.count);
         });
-        console.log('2 Counter after increment', this.state.count); */
+        console.log('2. Counter after increment', this.state.count); */
 
 
-        this.setState((prevState) => ({
+        /*this.setState((prevState) => ({
             count: prevState.count + 1
         }), () => {
             // note this callback will be called after render() is called
             console.log('Counter after increment inside callback', this.state.count);
         });
-        console.log('3 Counter after increment', this.state.count);
+        console.log('3. Counter after increment', this.state.count);*/
 
         
         /* this.setState((prevState, props) => ({
@@ -58,7 +58,7 @@ export class Counter extends React.Component {
     }
 
     render() {
-        console.log('Counter render', this.state);
+        //console.log('Counter render', this.state);
         return (
             <div>
                 <h1>Count - {this.state.count}</h1>
@@ -75,7 +75,7 @@ export class Counter extends React.Component {
     Props:
         1. props get passed to the component
         2. Function parameters
-        3. props are immutable
+        3. props are immutable - Not changeable
         4. props - Functional Components, this.props - Class Components
 
     State:

@@ -27,7 +27,7 @@ const core = require("@spec2ts/core");
 const openapi = require("@spec2ts/openapi");
 
 async function generateSpec(path) {
-  var result = await openapi.parseOpenApiFile(path);
+  var result = await openapi.parseOpenApiFile(path, { cwd: getAssetsPath() });
 
   console.log('------------------------------');
 
@@ -36,11 +36,19 @@ async function generateSpec(path) {
   //const output = core.cli.getOutputPath(path);
   // console.log(output);
   //await core.cli.mkdirp(output);
-
+  //return;
   await core.cli.writeFile(
     'tests/assets/ts/test.d.ts',
     content
   );
 }
-const path = "tests/assets/petstore.yml";
+const path = "tests/assets/nested-api.yml";
 generateSpec(path);
+
+function getAssetsPath(file) {
+  //import * as path from "path";
+  const path = require("path");
+  return file ?
+      path.join(__dirname, "tests/assets", file) :
+      path.join(__dirname, "tests/assets");
+}

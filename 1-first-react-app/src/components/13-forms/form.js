@@ -60,6 +60,7 @@ export class Form extends React.Component {
                         <button type="submit">Submit</button>
                     </div>
                 </form>
+                <p>{JSON.stringify(this.state)}</p>
             </div>
         );
     }
