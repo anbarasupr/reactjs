@@ -1,11 +1,25 @@
 import React from 'react';
 import './App.css';
 import { FragmentDemo, Table, FragmentDemo1 } from './components/1-fragment/Fragment';
-import { PureComp,ParentComp } from './components/2-pure-component/Fragment';
+import { PureComp, ParentComp } from './components/2-pure-component/PureComp';
 
-import  MemoComp from './components/3-memo/MemoComp';
+import MemoComp from './components/3-memo/MemoComp';
 import RefDemo from './components/4-refs/RefDemo';
 import FocusInput from './components/4-refs-with-class-component/FocusInput';
+import FRParentInput from './components/5-forwarding-refs/FRParentInput';
+import PortalDemo from './components/6-portals/PortalDemo';
+import Hero from './components/7-error-boundary/Hero';
+import ErrorBoundary from './components/7-error-boundary/ErrorBoundary';
+import ClickCounter from './components/8-higher-order-components/ClickCounter';
+import HoverCounter from './components/8-higher-order-components/HoverCounter';
+import ClickCounterTwo from './components/9-render-props/ClickCounterTwo';
+import HoverCounterTwo from './components/9-render-props/HoverCounterTwo';
+import User from './components/9-render-props/User';
+import Counter from './components/9-render-props/Counter';
+import ComponentC from './components/10-context/ComponentC';
+import { UserProvider } from './components/10-context/userContext';
+import PostForm from './components/axios/PostForm';
+import PostList from './components/axios/PostList';
 export default class App extends React.Component {
   render() {
     return (
@@ -38,11 +52,82 @@ export default class App extends React.Component {
           }
 
           {
-              // refs with class component
-              <FocusInput/>
+            // refs with class component
+            // <FocusInput/>
 
           }
 
+          {
+            // forwarding ref
+            // <FRParentInput />
+          }
+
+          {
+            // portals
+            // <PortalDemo />
+          }
+
+          { // Error boundary
+            /*<div>
+              <ErrorBoundary>
+                <Hero heroName="Batman" />
+              </ErrorBoundary>
+
+              <ErrorBoundary>
+                <Hero heroName="Superman" />
+              </ErrorBoundary>
+              
+              <ErrorBoundary>
+                <Hero heroName="Joker" />
+              </ErrorBoundary>
+            </div>*/
+          }
+
+          {
+            // higher Order Component
+            /*<>
+              <ClickCounter name='Test'></ClickCounter>
+              <br />
+              <HoverCounter></HoverCounter>
+            </>*/
+          }
+
+          {
+            /* Without Render Props
+            <>
+              <ClickCounterTwo></ClickCounterTwo>
+              <br />
+              <HoverCounterTwo></HoverCounterTwo>
+              <br />
+              <User render={(isLoggedIn) => isLoggedIn ? 'Admin' : 'Guest'}></User>
+            </>*/
+
+            /* With Render Props*/
+            /*<>
+              <Counter render={
+                (count, incrementCount) => <ClickCounterTwo count={count} incrementCount={incrementCount}> </ClickCounterTwo>}>
+              </Counter>
+
+              <Counter render={
+                (count, incrementCount) => <HoverCounterTwo count={count} incrementCount={incrementCount}> </HoverCounterTwo>
+              }>
+              </Counter>
+            </>*/
+
+          }
+
+          {
+            // Context
+            /*<UserProvider value ='Admin User'>
+              <ComponentC />
+            </UserProvider>*/
+          }
+
+          {
+            // Axios
+            <PostForm/>
+            <PostList/>
+          }
         </header>
       </div>
     )
