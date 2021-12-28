@@ -12,6 +12,7 @@ import HookMouse from './components/2-useEffect/2-run-effects-only-once/HookMous
 import IntervalClassCounter from './components/2-useEffect/4-useEffect-with-incorrect-dependency/IntervalClassCounter';
 import IntervalHookCounter from './components/2-useEffect/4-useEffect-with-incorrect-dependency/IntervalHookCounter';
 import MouseContainer from './components/2-useEffect/3-useEffect-with-cleanup/MouseContainer';
+import DataFetching from './components/2-useEffect/5-datafetching/DataFetching';
 
 function App() {
   return (
@@ -63,18 +64,23 @@ function App() {
           </div>*/
         }
         {
-          <div>
+          /*<div>
             <h2>UseEffect - With Cleanup</h2>
             <MouseContainer />
-          </div>
+          </div>*/
         }
-
         {
           /*<div>
             <h2>UseEffect - With incorrect dependency</h2>
             <IntervalClassCounter />
             <IntervalHookCounter />
           </div>*/
+        }
+        {
+          <div>
+            <h2>UseEffect - Data Fetching Axios</h2>
+            <DataFetching />
+          </div>
         }
       </header>
     </div>
