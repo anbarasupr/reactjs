@@ -132,6 +132,15 @@ array.reduce method returns a single value			useReducer returns a pair of values
 
 
 
+                                                    
+Summary:
+--------
+useReducer is a hook used for state management in react
+useReducer is related to reducer functions
+useReducer(reducer, initialState)
+reducer(currentState, action)
+
+
 
 When to use?:
 ------------
