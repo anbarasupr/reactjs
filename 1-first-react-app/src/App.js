@@ -20,7 +20,7 @@ import { NameList } from './components/11-list-rendering/NameList';
 import { NameListIndex } from './components/11-list-rendering/NameListIndex';
 import { ToDoList } from './components/11-list-rendering/IndexAsKeyAntipattern';
 import { Stylesheet, Inline } from './components/12-styling/Stylesheet';
-import style from './components/12-styling/appstyle.module.css'; // module level withi imported class due to alias given
+import style from './components/12-styling/appstyle.module.css'; // module level with imported class due to alias given
 import './components/12-styling/appstyle.css'; // global level
 import { Form } from './components/13-forms/form';
 import { LifecycleA } from './components/14-life-cycle-hooks/LifeCycleA';
