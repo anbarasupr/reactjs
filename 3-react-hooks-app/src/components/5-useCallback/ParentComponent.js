@@ -42,7 +42,7 @@ export default ParentComponent
 	Button.js:4 Rendering button -  Increment Salary
 
 
-	What we ewant to achieve:
+	What we want to achieve:
 	-----------------------------------
 	when we increment age, Title and Salary related components should not re-render and the same for salary increment also.
 

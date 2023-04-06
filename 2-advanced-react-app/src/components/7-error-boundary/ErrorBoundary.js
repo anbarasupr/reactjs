@@ -39,7 +39,7 @@ export default ErrorBoundary
  * componentDidCatch method is used to log the error information
  * 
  * 
- * Error boundaries are React components taht catch javascript error in their child component tree, log those errors 
+ * Error boundaries are React components that catch javascript error in their child component tree, log those errors 
  * and display a fallback Ui.
  * 
  * The placement of the Error Boundary also matters as it controls if the entire app should have the fall-back UI 
